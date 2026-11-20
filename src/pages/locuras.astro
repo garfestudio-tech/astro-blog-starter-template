@@ -1,0 +1,87 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead
+			title={`Locuras · ${SITE_TITLE}`}
+			description="Experimentos, pruebas maker e ideas fuera de guion en GarFeStudio."
+		/>
+	</head>
+	<body>
+		<Header />
+		<main class="locuras">
+			<p class="eyebrow">Algo Más que RAM · Zona maker</p>
+			<h1>Locuras</h1>
+			<p class="lead">
+				Rincón para pruebas sin pretensiones, experimentos técnicos y montajes que
+				nacen por curiosidad antes que por encargo.
+			</p>
+
+			<section class="status-box" aria-label="Estado de la sección">
+				<p>
+					A fuego lento: iré subiendo notas, pruebas y pequeños inventos a medida
+					que cobren forma y merezca la pena documentarlos.
+				</p>
+				<a href="/blog" class="back-link">Ver proyectos publicados</a>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.locuras {
+		max-width: 780px;
+		margin: 0 auto;
+		padding: 3.5rem 1.25rem 4rem;
+	}
+	.eyebrow {
+		margin: 0 0 0.5rem;
+		font-size: 0.85rem;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: rgb(var(--gray));
+	}
+	h1 {
+		margin: 0 0 1rem;
+		line-height: 1.1;
+	}
+	.lead {
+		margin: 0;
+		font-size: 1.1rem;
+		line-height: 1.65;
+		color: rgb(var(--gray-dark));
+		max-width: 62ch;
+	}
+	.status-box {
+		margin-top: 2.25rem;
+		padding: 1.25rem 1.35rem;
+		border: 1px solid rgba(var(--gray), 0.25);
+		border-radius: 14px;
+		background: rgba(var(--gray-light), 0.35);
+	}
+	.status-box p {
+		margin: 0 0 1rem;
+		color: rgb(var(--gray-dark));
+		line-height: 1.6;
+	}
+	.back-link {
+		display: inline-block;
+		padding: 0.55rem 1rem;
+		background: rgb(var(--black));
+		color: #fff;
+		text-decoration: none;
+		border-radius: 10px;
+		font-weight: 600;
+		font-size: 0.92rem;
+	}
+	.back-link:hover {
+		opacity: 0.9;
+	}
+</style>
