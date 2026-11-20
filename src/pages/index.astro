@@ -12,21 +12,138 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body>
 		<Header />
-		<main>
-			<h1>GarFeStudio</h1>
-			<p>
-				Escaparate personal centrado en piezas técnicas, identidad de marca personalizada,
-				merchandising básico y mantenimiento de equipos.
-			</p>
-			<p>
-				Proyecto construido a fuego lento como extensión de mi trayectoria técnica,
-				reuniendo fichas, pruebas y notas seleccionadas sin publicar encargos confidenciales.
-			</p>
-			<ul>
-				<li><a href="/blog">Ver fichas y notas</a></li>
-				<li><a href="mailto:garfestudio@gmail.com">Contacto: garfestudio@gmail.com</a></li>
-			</ul>
+		<main class="home">
+			<section class="hero">
+				<p class="eyebrow">Escaparate técnico · Trabajo a fuego lento</p>
+				<h1>GarFeStudio</h1>
+				<p class="lead">
+					Espacio personal construido como extensión de mi trayectoria técnica,
+					reuniendo proyectos seleccionados y pruebas prácticas sin publicar
+					encargos confidenciales.
+				</p>
+				<div class="actions">
+					<a href="/blog" class="btn-primary">Ver proyectos</a>
+					<a href="mailto:garfestudio@gmail.com" class="btn-secondary">
+						garfestudio@gmail.com
+					</a>
+				</div>
+			</section>
+
+			<section class="pillars" aria-label="Áreas de trabajo">
+				<ul>
+					<li>
+						<strong>Piezas técnicas</strong>
+						<span>Desarrollo práctico, pruebas y soluciones funcionales.</span>
+					</li>
+					<li>
+						<strong>Identidad personalizada</strong>
+						<span>Criterio visual y coherencia aplicada a medida.</span>
+					</li>
+					<li>
+						<strong>Merchandising básico</strong>
+						<span>Aplicaciones sencillas y útiles, sin exceso.</span>
+					</li>
+					<li>
+						<strong>Mantenimiento de equipos</strong>
+						<span>Revisión, puesta a punto y cuidado continuo.</span>
+					</li>
+				</ul>
+			</section>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	.home {
+		max-width: 780px;
+		margin: 0 auto;
+		padding: 3.5rem 1.25rem 4rem;
+	}
+	.eyebrow {
+		margin: 0 0 0.5rem;
+		font-size: 0.85rem;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: rgb(var(--gray));
+	}
+	h1 {
+		margin: 0 0 1rem;
+		line-height: 1.1;
+	}
+	.lead {
+		margin: 0;
+		font-size: 1.1rem;
+		line-height: 1.65;
+		color: rgb(var(--gray-dark));
+		max-width: 62ch;
+	}
+	.actions {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 1rem;
+		margin-top: 2rem;
+	}
+	.btn-primary {
+		display: inline-block;
+		padding: 0.65rem 1.15rem;
+		background: rgb(var(--black));
+		color: #fff;
+		text-decoration: none;
+		border-radius: 4px;
+		font-weight: 600;
+	}
+	.btn-primary:hover {
+		opacity: 0.9;
+	}
+	.btn-secondary {
+		color: rgb(var(--gray-dark));
+		text-decoration: none;
+		border-bottom: 1px solid rgba(var(--gray), 0.45);
+		padding-bottom: 0.15rem;
+	}
+	.btn-secondary:hover {
+		color: rgb(var(--black));
+		border-bottom-color: rgb(var(--black));
+	}
+	.pillars {
+		margin-top: 3rem;
+		padding-top: 2rem;
+		border-top: 1px solid rgba(var(--gray), 0.25);
+	}
+	.pillars ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem 1.5rem;
+	}
+	.pillars li {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+		padding: 0.85rem 1rem;
+		border: 1px solid rgba(var(--gray), 0.22);
+		border-radius: 4px;
+		background: rgba(var(--gray-light), 0.35);
+	}
+	.pillars strong {
+		color: rgb(var(--black));
+		font-size: 0.98rem;
+	}
+	.pillars span {
+		color: rgb(var(--gray-dark));
+		font-size: 0.9rem;
+		line-height: 1.45;
+	}
+	@media (max-width: 640px) {
+		.home {
+			padding-top: 2.25rem;
+		}
+		.pillars ul {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
