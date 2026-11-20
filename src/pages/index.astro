@@ -18,12 +18,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<h1>GarFeStudio</h1>
 				<p class="lead">
 					Espacio personal construido como extensión de mi trayectoria técnica,
-					proyectos y por que no locuras.
+					proyectos y, por qué no, locuras.
 				</p>
 				<div class="actions">
 					<a href="/blog" class="btn-primary">Ver proyectos</a>
-					<a href="mailto:garfestudio@gmail.com" class="btn-secondary">
-						garfestudio@gmail.com
+					<a
+						href="https://www.linkedin.com/in/TU-URL-DE-LINKEDIN"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="btn-secondary"
+					>
+						Ver perfil en LinkedIn
 					</a>
 				</div>
 			</section>
@@ -97,14 +102,18 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		opacity: 0.9;
 	}
 	.btn-secondary {
+		display: inline-block;
+		padding: 0.65rem 1.15rem;
 		color: rgb(var(--gray-dark));
+		background: transparent;
+		border: 1px solid rgba(var(--gray), 0.45);
+		border-radius: 4px;
 		text-decoration: none;
-		border-bottom: 1px solid rgba(var(--gray), 0.45);
-		padding-bottom: 0.15rem;
+		font-weight: 600;
 	}
 	.btn-secondary:hover {
 		color: rgb(var(--black));
-		border-bottom-color: rgb(var(--black));
+		border-color: rgb(var(--black));
 	}
 	.pillars {
 		margin-top: 3rem;
