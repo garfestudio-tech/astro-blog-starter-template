@@ -44,8 +44,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 						<span>Aunque este blog es MasMaker puedes ver mi trayectoria pulsando en el botón de linkedin.</span>
 					</li>
 					<li>
-						<strong>Locuras</strong>
-						<span>Futura sección de proyectos personales .</span>
+						<a href="/locuras" class="pillar-link">
+							<strong>Locuras</strong>
+							<span>Futura sección de proyectos personales.</span>
+						</a>
 					</li>
 					<li>
 						<strong>Encargos</strong>
@@ -153,5 +155,21 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		.pillars ul {
 			grid-template-columns: 1fr;
 		}
-	}
+.pillars li:has(.pillar-link) {
+	padding: 0;
+}
+.pillar-link {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+	padding: 0.85rem 1rem;
+	text-decoration: none;
+	color: inherit;
+	border-radius: 14px;
+}
+.pillar-link:hover strong {
+	text-decoration: underline;
+}	
+
+}
 </style>
