@@ -139,6 +139,21 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		border-radius: 14px;
 		background: rgba(var(--gray-light), 0.35);
 	}
+	.pillars li:has(.pillar-link) {
+		padding: 0;
+	}
+	.pillar-link {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+		padding: 0.85rem 1rem;
+		text-decoration: none;
+		color: inherit;
+		border-radius: 14px;
+	}
+	.pillar-link:hover strong {
+		text-decoration: underline;
+	}
 	.pillars strong {
 		color: rgb(var(--black));
 		font-size: 0.98rem;
@@ -155,21 +170,5 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		.pillars ul {
 			grid-template-columns: 1fr;
 		}
-.pillars li:has(.pillar-link) {
-	padding: 0;
-}
-.pillar-link {
-	display: flex;
-	flex-direction: column;
-	gap: 0.2rem;
-	padding: 0.85rem 1rem;
-	text-decoration: none;
-	color: inherit;
-	border-radius: 14px;
-}
-.pillar-link:hover strong {
-	text-decoration: underline;
-}	
-
-}
+	}
 </style>
