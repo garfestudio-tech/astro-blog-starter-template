@@ -25,12 +25,21 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			<section class="pillars" aria-label="Áreas de trabajo">
 				<ul>
 					<li>
-						<strong>Mis Proyectos . Encargos</strong>
-						<span>Proyectos propios y encargos.</span>
+						<a href="/blog" class="pillar-link">
+							<strong>Mis Proyectos . Encargos</strong>
+							<span>Proyectos propios y encargos.</span>
+						</a>
 					</li>
 					<li>
-						<strong>Mantenimientos de equipos IT </strong>
-						<span>Aunque este blog es MasMaker puedes ver mi trayectoria pulsando en el botón de linkedin.</span>
+						<a
+							href="https://www.linkedin.com/in/miguelferreirogarcia/"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="pillar-link"
+						>
+							<strong>Mantenimientos de equipos IT</strong>
+							<span>Aunque este blog es MasMaker puedes ver mi trayectoria pulsando aquí o en LinkedIn.</span>
+						</a>
 					</li>
 					<li>
 						<a href="/locuras" class="pillar-link">
@@ -44,18 +53,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					</li>
 				</ul>
 			</section>
-
-			<div class="actions">
-				<a href="/blog" class="btn-primary">Ver proyectos</a>
-				<a
-					href="https://www.linkedin.com/in/miguelferreirogarcia/"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="btn-secondary"
-				>
-					Ver perfil en LinkedIn
-				</a>
-			</div>
 		</main>
 		<Footer />
 	</body>
@@ -84,39 +81,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		line-height: 1.65;
 		color: rgb(var(--gray-dark));
 		max-width: 62ch;
-	}
-	.actions {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		gap: 1rem;
-		margin-top: 2rem;
-	}
-	.btn-primary {
-		display: inline-block;
-		padding: 0.65rem 1.15rem;
-		background: rgb(var(--black));
-		color: #fff;
-		text-decoration: none;
-		border-radius: 10px;
-		font-weight: 600;
-	}
-	.btn-primary:hover {
-		opacity: 0.9;
-	}
-	.btn-secondary {
-		display: inline-block;
-		padding: 0.65rem 1.15rem;
-		color: rgb(var(--gray-dark));
-		background: transparent;
-		border: 1px solid rgba(var(--gray), 0.45);
-		border-radius: 10px;
-		text-decoration: none;
-		font-weight: 600;
-	}
-	.btn-secondary:hover {
-		color: rgb(var(--black));
-		border-color: rgb(var(--black));
 	}
 	.pillars {
 		margin-top: 3rem;
